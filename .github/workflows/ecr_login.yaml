@@ -3,6 +3,9 @@ name: Login to Amazon ECR
 on:
   workflow_dispatch:
 
+env:            
+  AWS_REGION: ap-southeast-1
+
 jobs:
   login_ecr:
     runs-on: ubuntu-latest
