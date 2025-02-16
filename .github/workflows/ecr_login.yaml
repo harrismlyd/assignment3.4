@@ -15,7 +15,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
       with:
           mask-password: true
-          registries: "${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com"
+          region: ${{ env.AWS_REGION }}
 
     - name: Build and push Docker image to Amazon ECR
       id: build-image
